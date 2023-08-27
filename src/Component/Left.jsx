@@ -36,14 +36,14 @@ const Left = () => {
     <Box className="App">
       <>
         <Box className="left">
-          <Heading fontFamily={"Roboto"} fontSize={{ base: "24px", md: "24px", lg: "36px" }}>Weather App</Heading>
+          <Heading fontFamily={"Roboto"}  fontSize={{ base: "24px", md: "24px", lg: "36px" }}>Weather App</Heading>
           
           <Select
             placeholder="Country"
             variant="outline"
             
             width={{ base: "120px", md: "140px", lg: "178px" }}
-            m="15px"
+            m="25px"
             onChange={(e) =>
               setselectCountry(
                 country.filter((ele) => ele.name === e.target.value)
@@ -58,8 +58,9 @@ const Left = () => {
           <Select
             placeholder="City"
             variant="outline"
+            m="25px"
             width={{ base: "120px", md: "140px", lg: "178px" }}
-            m="15px"
+           
             onChange={(e) =>
               setSelectCity(city.filter((ele) => ele.name === e.target.value))
             }
@@ -71,7 +72,7 @@ const Left = () => {
           <Box className="displaycity">
             {displaycity !== undefined ? (
               <Box>
-                <Heading size="xl"  fontSize={{ base: "22px", md: "44px", lg: "44px" }} fontFamily={"Roboto"}>
+                <Heading size="xl"  fontSize={{ base: "22px", md: "34px", lg: "34px" }} fontFamily={"Roboto"}>
                   {" "}
                   {selectcountry[0].flag === undefined
                     ? "loading"
